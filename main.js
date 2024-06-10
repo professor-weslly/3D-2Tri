@@ -8,36 +8,48 @@ const perguntas = [
     {
         enunciado:"Qual a sua idade ?",
         alternativas:[
-            "10~18",
-            "Alternativa 2",
+            "10~12",
+            "12~14",
+            "14~16",
+            "16~18",
         ]
     },
     {
-        enunciado:"Pergunta 2",
+        enunciado:"Qual a sua série",
         alternativas:[
-            "Alternativa 1",
-            "Alternativa 2",
+            "6º",
+            "8º",
+            "1º ensino médio",
+            "2º ensino médio",
+            "3º ensino médio",
         ]
     },
     {
-        enunciado:"Pergunta 1",
+        enunciado:"Qual a sua matéria fovorita ?",
         alternativas:[
-            "Alternativa 1",
-            "Alternativa 2",
+            "Matemática",
+            "Portugues",
+            "Quimica",
+            "Historia",
+            "Programação",
+            "Outra",
         ]
     },
     {
-        enunciado:"Pergunta 1",
+        enunciado:"O que você mais gosta na escola ?",
         alternativas:[
-            "Alternativa 1",
-            "Alternativa 2",
+            "Aulas",
+            "Materia Livre",
+            "Intervalo",
+            "Ir embora",
         ]
     },
     {
-        enunciado:"Pergunta 1",
+        enunciado:"Você gostou do questionario ?",
         alternativas:[
-            "Alternativa 1",
-            "Alternativa 2",
+            "Sim",
+            "Claro",
+            "Obivio",
         ]
     }
 ];
