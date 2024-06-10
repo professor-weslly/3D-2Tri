@@ -1,7 +1,11 @@
 :root{
     --cor-fundo: rgba(56, 68, 69, 0.77);
     --cor-principal: rgb(2, 106, 138);
-    --cor-secundaria: rgb(0,0,0);
-    --cor-destaque: rgb(0,0,0);
-    --cor-testo: rgb(0,0,0);
+    --cor-secundaria: rgb(0, 189, 214);
+    --cor-destaque: rgb(0, 218, 247);
+    --cor-texto: rgb(255, 255, 255);
+}
+
+body{
+    background-color: var(--cor-fundo);
 }
