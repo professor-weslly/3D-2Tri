@@ -8,48 +8,114 @@ const perguntas = [
     {
         enunciado:"Qual a sua idade ?",
         alternativas:[
-            "10~12",
-            "12~14",
-            "14~16",
-            "16~18",
+            {
+                texto:"10~12"
+                afirmacao:"afirmação",
+            },
+            {
+                texto:"12~14"
+                afirmacao:"afirmação",
+            },
+            {
+                texto:"14~16"
+                afirmacao:"afirmação",
+            },
+            {
+                texto:"16~18"
+                afirmacao:"afirmação",
+            },
         ]
     },
     {
         enunciado:"Qual a sua série",
         alternativas:[
-            "6º",
-            "8º",
-            "1º ensino médio",
-            "2º ensino médio",
-            "3º ensino médio",
+            {
+                texto:"6º"
+                afirmacao:"afirmação",
+            },
+            {
+                texto:"8º"
+                afirmacao:"afirmação",
+            },
+            {
+                texto:"1º ensino médio"
+                afirmacao:"afirmação",
+            },
+            {
+                texto:"2º ensino médio"
+                afirmacao:"afirmação",
+            },
+            {
+                texto:"3º ensino médio"
+                afirmacao:"afirmação",
+            },
         ]
     },
     {
         enunciado:"Qual a sua matéria fovorita ?",
         alternativas:[
-            "Matemática",
-            "Portugues",
-            "Quimica",
-            "Historia",
-            "Programação",
-            "Outra",
+            {
+                texto:"Matemática"
+                afirmacao:"afirmação",
+            },
+            {
+                texto:"Portugues"
+                afirmacao:"afirmação",
+            },
+            {
+                texto:"Quimica"
+                afirmacao:"afirmação",
+            },
+            {
+                texto:"Historia"
+                afirmacao:"afirmação",
+            },
+            {
+                texto:"Programação"
+                afirmacao:"afirmação",
+            },
+            {
+                texto:"Outra"
+                afirmacao:"afirmação",
+            },
         ]
     },
     {
         enunciado:"O que você mais gosta na escola ?",
         alternativas:[
-            "Aulas",
-            "Materia Livre",
-            "Intervalo",
-            "Ir embora",
+            {
+                texto:"Aulas"
+                afirmacao:"afirmação",
+            },
+            {
+                texto:"Materia Livre"
+                afirmacao:"afirmação",
+            },
+            {
+                texto:"Intervalo"
+                afirmacao:"afirmação",
+            },
+            {
+                texto:"Ir embora"
+                afirmacao:"afirmação",
+            },
         ]
     },
     {
         enunciado:"Você gostou do questionario ?",
         alternativas:[
-            "Sim",
-            "Claro",
-            "Obivio",
+            {
+                texto:"Sim"
+                afirmacao:"afirmação",
+            },
+            {
+                texto:"Claro"
+                afirmacao:"afirmação",
+            },
+            {
+                texto:"Obivio"
+                afirmacao:"afirmação",
+            },
         ]
     }
 ];
@@ -69,12 +135,5 @@ function mostraAlternativas(){
         botaoAlternativas.appendChild(botaoAlternativas);
     }
 }
-
-
-
-
-
-
-
 
 mostraPergunta();
