@@ -1,139 +1,111 @@
-const caixaPrincipal = document.querySelector(".caixa-principal");
-const caixaPerguntas = document.querySelector(".caixa-perguntas");
-const caixaAlternativas = document.querySelector(".caixa-alternativas");
-const caixaResultado = document.querySelector(".caixa-resultado");
-const textoResultado = document.querySelector(".texto-resultado");
+const caixaPrincipal = document.querySelector('.caixa-principal');
+const caixaPerguntas = document.querySelector('.caixa-perguntas');
+const caixaAlternativas = document.querySelector('.caixa-alternativas');
+const caixaResultado = document.querySelector('.caixa-resultado');
+const textoResultado = document.querySelector('.texto-resultado');
 
 const perguntas = [
     {
-        enunciado:"Qual a sua idade ?",
-        alternativas:[
+        enunciado: "coloque o enunciado da pergunta 1",
+        alternativas: [
             {
-                texto:"10~12"
-                afirmacao:"afirmação",
+                texto: "Primeira alternativa"
+                afirmacao: "afirmação que explica o motivo de escolher essa opção"
             },
             {
-                texto:"12~14"
-                afirmacao:"afirmação",
-            },
-            {
-                texto:"14~16"
-                afirmacao:"afirmação",
-            },
-            {
-                texto:"16~18"
-                afirmacao:"afirmação",
-            },
+                texto: "Primeira alternativa"
+                afirmacao: "afirmação que explica o motivo de escolher essa opção"
+            }
         ]
-    },
-    {
-        enunciado:"Qual a sua série",
-        alternativas:[
-            {
-                texto:"6º"
-                afirmacao:"afirmação",
-            },
-            {
-                texto:"8º"
-                afirmacao:"afirmação",
-            },
-            {
-                texto:"1º ensino médio"
-                afirmacao:"afirmação",
-            },
-            {
-                texto:"2º ensino médio"
-                afirmacao:"afirmação",
-            },
-            {
-                texto:"3º ensino médio"
-                afirmacao:"afirmação",
-            },
-        ]
-    },
-    {
-        enunciado:"Qual a sua matéria fovorita ?",
-        alternativas:[
-            {
-                texto:"Matemática"
-                afirmacao:"afirmação",
-            },
-            {
-                texto:"Portugues"
-                afirmacao:"afirmação",
-            },
-            {
-                texto:"Quimica"
-                afirmacao:"afirmação",
-            },
-            {
-                texto:"Historia"
-                afirmacao:"afirmação",
-            },
-            {
-                texto:"Programação"
-                afirmacao:"afirmação",
-            },
-            {
-                texto:"Outra"
-                afirmacao:"afirmação",
-            },
-        ]
-    },
-    {
-        enunciado:"O que você mais gosta na escola ?",
-        alternativas:[
-            {
-                texto:"Aulas"
-                afirmacao:"afirmação",
-            },
-            {
-                texto:"Materia Livre"
-                afirmacao:"afirmação",
-            },
-            {
-                texto:"Intervalo"
-                afirmacao:"afirmação",
-            },
-            {
-                texto:"Ir embora"
-                afirmacao:"afirmação",
-            },
-        ]
-    },
-    {
-        enunciado:"Você gostou do questionario ?",
-        alternativas:[
-            {
-                texto:"Sim"
-                afirmacao:"afirmação",
-            },
-            {
-                texto:"Claro"
-                afirmacao:"afirmação",
-            },
-            {
-                texto:"Obivio"
-                afirmacao:"afirmação",
-            },
-        ]
-    }
+},
+{
+    enunciado: "coloque o enunciado da pergunta 1",
+    alternativas: [
+        {
+            texto: "Primeira alternativa"
+            afirmacao: "afirmação que explica o motivo de escolher essa opção"
+      },
+        {
+            texto: "Primeira alternativa"
+            afirmacao: "afirmação que explica o motivo de escolher essa opção"
+      }
+    ]
+},
+{
+    enunciado: "coloque o enunciado da pergunta 1",
+    alternativas: [
+        {
+            texto: "Primeira alternativa"
+            afirmacao: "afirmação que explica o motivo de escolher essa opção"
+      },
+        {
+            texto: "Primeira alternativa"
+            afirmacao: "afirmação que explica o motivo de escolher essa opção"
+      }
+    ]
+},
+{
+    enunciado: "coloque o enunciado da pergunta 1",
+    alternativas: [
+        {
+            texto: "Primeira alternativa"
+            afirmacao: "afirmação que explica o motivo de escolher essa opção"
+      },
+        {
+            texto: "Primeira alternativa"
+            afirmacao: "afirmação que explica o motivo de escolher essa opção"
+      }
+    ]
+},
+{
+    enunciado: "coloque o enunciado da pergunta 1",
+    alternativas: [
+        {
+            texto: "Primeira alternativa"
+            afirmacao: "afirmação que explica o motivo de escolher essa opção"
+      },
+        {
+            texto: "Primeira alternativa"
+            afirmacao: "afirmação que explica o motivo de escolher essa opção"
+      }
+    ]
+},
 ];
 
-let atual =0;
+let atual = 0;
 let perguntaAtual;
+let historiaFinal = "";
 
-function mostraPergunta(){
+function mostraPergunta() {
+    if(atual >= perguntas.length){
+        mostraResultado();
+        return;
+    }
     perguntaAtual = perguntas[atual];
     caixaPerguntas.textContent = perguntaAtual.enunciado;
+    caixaAlternativas.textContent = "";
     mostraAlternativas();
 }
 function mostraAlternativas(){
     for(const alternativa of perguntaAtual.alternativas){
-        const botaoAlternativas = document.createElement("button");
-        botaoAlternativas.textContent =alternativa;
-        botaoAlternativas.appendChild(botaoAlternativas);
+        const botaoAlternativas = document.createElement('button');
+        botaoAlternativas.textContent = alternativa.texto;
+        botaoAlternativas.addEventListener("click", () => respostaSelecionada(alternativa));
+        caixaAlternativas.append(botaoAlternativas);
     }
+}
+
+function respostaSelecionada(opcaoSelecionada){
+    const afirmacoes = opcaoSelecionada.afirmação
+    historiaFinal += afirmacoes + " ";
+    atual++;
+    mostraPergunta();
+}
+
+function mostraResultado(){
+    caixaPerguntas.textContent = "Esse texto é a introdução para juntar todas as afirmações das respostas..."
+    textoResultado.textContent = historiaFinal;
+    caixaAlternativas.textContent = "";
 }
 
 mostraPergunta();
