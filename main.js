@@ -9,63 +9,63 @@ const perguntas = [
         enunciado: "coloque o enunciado da pergunta 1",
         alternativas: [
             {
-                texto: "Primeira alternativa"
+                texto: "Primeira alternativa",
                 afirmacao: "afirmação que explica o motivo de escolher essa opção"
             },
             {
-                texto: "Primeira alternativa"
+                texto: "Primeira alternativa",
                 afirmacao: "afirmação que explica o motivo de escolher essa opção"
             }
         ]
 },
 {
-    enunciado: "coloque o enunciado da pergunta 1",
+    enunciado: "coloque o enunciado da pergunta 2",
     alternativas: [
         {
-            texto: "Primeira alternativa"
+            texto: "Primeira alternativa",
             afirmacao: "afirmação que explica o motivo de escolher essa opção"
       },
         {
-            texto: "Primeira alternativa"
+            texto: "Primeira alternativa",
             afirmacao: "afirmação que explica o motivo de escolher essa opção"
       }
     ]
 },
 {
-    enunciado: "coloque o enunciado da pergunta 1",
+    enunciado: "coloque o enunciado da pergunta 3",
     alternativas: [
         {
-            texto: "Primeira alternativa"
+            texto: "Primeira alternativa",
             afirmacao: "afirmação que explica o motivo de escolher essa opção"
       },
         {
-            texto: "Primeira alternativa"
+            texto: "Primeira alternativa",
             afirmacao: "afirmação que explica o motivo de escolher essa opção"
       }
     ]
 },
 {
-    enunciado: "coloque o enunciado da pergunta 1",
+    enunciado: "coloque o enunciado da pergunta 4",
     alternativas: [
         {
-            texto: "Primeira alternativa"
+            texto: "Primeira alternativa",
             afirmacao: "afirmação que explica o motivo de escolher essa opção"
       },
         {
-            texto: "Primeira alternativa"
+            texto: "Primeira alternativa",
             afirmacao: "afirmação que explica o motivo de escolher essa opção"
       }
     ]
 },
 {
-    enunciado: "coloque o enunciado da pergunta 1",
+    enunciado: "coloque o enunciado da pergunta 5",
     alternativas: [
         {
-            texto: "Primeira alternativa"
+            texto: "Primeira alternativa",
             afirmacao: "afirmação que explica o motivo de escolher essa opção"
       },
         {
-            texto: "Primeira alternativa"
+            texto: "Primeira alternativa",
             afirmacao: "afirmação que explica o motivo de escolher essa opção"
       }
     ]
